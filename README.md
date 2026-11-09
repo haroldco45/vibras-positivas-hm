@@ -23,7 +23,7 @@ En `index.html`, busca `const APPS = [` y copia una línea:
 ```js
 {n:'Nombre', c:'comida', es:'Descripción', en:'Description', u:'https://app.netlify.app/', i:'https://app.netlify.app/og.jpg'},
 ```
-Categorías: `comida`, `belleza`, `comercio`, `educacion`, `turismo`, `empresas`.
+Categorías: `comida`, `belleza`, `comercio`, `educacion`, `turismo`, `autos`, `empresas`.
 La foto (`i`) es la imagen de vista previa que ya tiene cada app. Si una app se pausa, su tarjeta muestra el nombre sobre los colores de la marca.
 
 Después de cada cambio, sube la versión en `sw.js` (`const V = ...`) para que los celulares vean lo nuevo.

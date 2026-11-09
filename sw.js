@@ -1,5 +1,5 @@
 // Vibras Positivas HM — service worker. Sube la versión cada vez que cambies index.html
-const V = 'vibras-hm-v2026-11-09c';
+const V = 'vibras-hm-v2026-11-09d';
 const SHELL = ['/', '/index.html', '/manifest.json', '/icon-192.png', '/icon-512.png', '/media/hero-poster.jpg', '/og-vibras.jpg', '/img/papeleria.jpg'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(V).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
