@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Vibras Positivas HM · Apps reales para vender más</title>
+<meta name="description" content="Apps, catálogos con pedidos por WhatsApp, citas, papelería digital y apps administrativas para negocios de Caucasia, el Bajo Cauca y Colombia. Más de 40 apps hechas.">
+<link rel="canonical" href="https://vibras-positivas-hm.netlify.app/">
+<meta name="theme-color" content="#160a05">
+
+<!-- Vista previa al compartir (Open Graph / Twitter) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vibras-positivas-hm.netlify.app/">
+<meta property="og:title" content="Vibras Positivas HM · Apps reales para vender más">
+<meta property="og:description" content="Más de 40 apps hechas para negocios de Caucasia, el Bajo Cauca y Colombia. Cotiza la tuya por WhatsApp.">
+<meta property="og:image" content="https://vibras-positivas-hm.netlify.app/og-vibras.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vibras Positivas HM · Apps reales para vender más">
+<meta name="twitter:description" content="Más de 40 apps hechas para negocios de Caucasia, el Bajo Cauca y Colombia. Cotiza la tuya por WhatsApp.">
+<meta name="twitter:image" content="https://vibras-positivas-hm.netlify.app/og-vibras.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_CO">
+
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#160a05; --ink2:#22110a; --card:#2a160d; --line:rgba(255,255,255,.10);
+  --red:#e5262b; --orange:#ff7a1a; --yellow:#ffc21a; --cream:#fff6ec; --muted:#c9b5a5;
+  --grad:linear-gradient(100deg,var(--red) 0%,var(--orange) 55%,var(--yellow) 100%);
+  --r:18px; --fc:'Barlow Condensed','Arial Narrow','Roboto Condensed',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',system-ui,sans-serif;background:var(--ink);color:var(--cream);line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{width:min(1180px,92vw);margin-inline:auto}
+.display{font-family:var(--fc);font-weight:800;line-height:.95;letter-spacing:-.01em;text-transform:uppercase}
+.gtext{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.kicker{font-family:var(--fc);font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow);font-size:.95rem}
+section{padding:96px 0;position:relative}
+.sec-head{max-width:760px;margin-bottom:44px}
+.sec-head h2{font-size:clamp(2.4rem,6vw,4.2rem);margin:.35em 0 .3em}
+.sec-head p{color:var(--muted);font-size:1.12rem}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;gap:.5em;padding:.95em 1.6em;border-radius:999px;font-weight:700;font-size:1rem;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-main{background:var(--grad);color:#1a0b04;box-shadow:0 10px 30px -8px rgba(255,122,26,.65)}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 16px 40px -8px rgba(255,122,26,.8)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+
+/* Barra superior */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,backdrop-filter .3s,padding .3s;padding:18px 0}
+header.solid{background:rgba(22,10,5,.86);backdrop-filter:blur(14px);padding:10px 0;border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:var(--fc);font-weight:900;font-size:1.55rem;letter-spacing:.02em;text-transform:uppercase;line-height:1}
+.brand b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand small{display:block;font-family:'Barlow';font-weight:600;font-size:.62rem;letter-spacing:.22em;color:var(--muted);margin-top:3px}
+.nav-links{display:flex;gap:26px;font-weight:600;font-size:.95rem}
+.nav-links a{opacity:.85;transition:opacity .2s}
+.nav-links a:hover{opacity:1;color:var(--yellow)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.lang{display:flex;border:1.5px solid rgba(255,255,255,.3);border-radius:999px;overflow:hidden;font-weight:700;font-size:.8rem}
+.lang button{padding:.45em .8em}
+.lang button.on{background:var(--grad);color:#1a0b04}
+.nav .btn{padding:.6em 1.1em;font-size:.9rem}
+@media(max-width:900px){.nav-links{display:none}.nav .btn-cta{display:none}}
+@media(max-width:480px){.brand{font-size:1.2rem}.brand small{font-size:.55rem;letter-spacing:.14em}}
+
+/* Hero con video real */
+.hero{min-height:100svh;display:flex;align-items:flex-end;padding:140px 0 70px;overflow:hidden}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transform:scale(1.04)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(180deg,rgba(22,10,5,.55) 0%,rgba(22,10,5,.35) 35%,rgba(22,10,5,.92) 82%,var(--ink) 100%),
+  linear-gradient(90deg,rgba(22,10,5,.85) 0%,rgba(22,10,5,.2) 70%)}
+.hero h1{font-size:clamp(3.2rem,10.5vw,8.6rem);max-width:12ch}
+.rot{display:inline-block;position:relative;min-width:6ch}
+.rot span{display:inline-block;animation:rotIn .6s cubic-bezier(.2,.8,.2,1)}
+@keyframes rotIn{from{opacity:0;transform:translateY(.4em) rotate(2deg)}to{opacity:1;transform:none}}
+.hero p.lead{font-size:clamp(1.1rem,2.2vw,1.4rem);max-width:640px;margin:22px 0 32px;color:#f3e4d6}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:56px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;backdrop-filter:blur(6px)}
+.stat{background:rgba(22,10,5,.72);padding:22px 20px}
+.stat b{font-family:var(--fc);font-weight:800;font-size:clamp(2.2rem,5vw,3.3rem);line-height:1;display:block}
+.stat span{color:var(--muted);font-size:.92rem}
+@media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* Cinta de fotos reales */
+.ribbon{padding:28px 0;overflow:hidden;background:var(--ink2);border-block:1px solid var(--line)}
+.track{display:flex;gap:14px;width:max-content;animation:slide 60s linear infinite}
+.track.rev{animation-direction:reverse;margin-top:14px;animation-duration:70s}
+.ribbon:hover .track{animation-play-state:paused}
+.track a{width:280px;aspect-ratio:1200/630;border-radius:12px;overflow:hidden;flex:none;position:relative;background:var(--card)}
+.track img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.track a:hover img{transform:scale(1.08)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* Servicios */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.svc{position:relative;border-radius:var(--r);overflow:hidden;min-height:340px;display:flex;align-items:flex-end;isolation:isolate;border:1px solid var(--line)}
+.svc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .7s}
+.svc::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(22,10,5,.15) 0%,rgba(22,10,5,.95) 72%)}
+.svc:hover img{transform:scale(1.07)}
+.svc .in{padding:22px}
+.svc .num{font-family:var(--fc);font-weight:800;font-size:1rem;letter-spacing:.15em;color:var(--yellow)}
+.svc h3{font-family:var(--fc);font-weight:800;font-size:1.85rem;text-transform:uppercase;line-height:1;margin:.25em 0 .35em}
+.svc p{color:#ead8c8;font-size:.98rem}
+
+/* Portafolio */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.chip{padding:.55em 1.1em;border-radius:999px;border:1.5px solid rgba(255,255,255,.22);font-weight:600;font-size:.92rem;transition:all .2s}
+.chip:hover{border-color:var(--orange)}
+.chip.on{background:var(--grad);border-color:transparent;color:#1a0b04}
+.chip i{font-style:normal;opacity:.7;margin-left:.35em;font-size:.85em}
+.search{width:100%;max-width:420px;padding:.85em 1.2em;border-radius:999px;background:var(--ink2);border:1.5px solid var(--line);color:#fff;font:inherit;margin-bottom:28px}
+.search:focus{outline:none;border-color:var(--orange)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
+.app{background:var(--card);border-radius:var(--r);overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s,border-color .3s}
+.app:hover{transform:translateY(-6px);box-shadow:0 22px 50px -20px rgba(255,122,26,.55);border-color:rgba(255,122,26,.5)}
+.app .ph{aspect-ratio:1200/630;overflow:hidden;position:relative;background:var(--grad)}
+.app .ph img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.app:hover .ph img{transform:scale(1.06)}
+.app .ph .fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--fc);font-weight:800;font-size:1.8rem;color:#1a0b04;text-transform:uppercase;padding:10px;text-align:center}
+.tag{z-index:2;position:absolute;top:10px;left:10px;background:rgba(22,10,5,.82);backdrop-filter:blur(6px);padding:.3em .75em;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.04em}
+.app .bd{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.app h3{font-family:var(--fc);font-weight:800;font-size:1.5rem;line-height:1.05;text-transform:uppercase}
+.app p{color:var(--muted);font-size:.93rem;flex:1}
+.app .acts{display:flex;gap:8px;margin-top:10px}
+.app .acts a{flex:1;text-align:center;padding:.65em .6em;border-radius:10px;font-weight:700;font-size:.88rem}
+.a-ver{background:rgba(255,255,255,.08)}
+.a-ver:hover{background:rgba(255,255,255,.16)}
+.a-want{background:var(--grad);color:#1a0b04}
+.empty{color:var(--muted);padding:30px 0;display:none}
+.private{margin-top:44px;padding:26px;border-radius:var(--r);border:1px dashed rgba(255,194,26,.4);background:rgba(255,194,26,.04)}
+.private h4{font-family:var(--fc);font-size:1.4rem;text-transform:uppercase;margin-bottom:10px}
+.private ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.private li{padding:.45em .9em;border-radius:999px;background:rgba(255,255,255,.07);font-size:.9rem;font-weight:600}
+
+/* Productos listos */
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px}
+.prod{display:grid;grid-template-columns:1fr;border-radius:var(--r);overflow:hidden;background:linear-gradient(160deg,#2f170c,#1d0d06);border:1px solid var(--line)}
+.prod img{aspect-ratio:1200/630;object-fit:cover;width:100%}
+.prod .bd{padding:20px}
+.prod h3{font-family:var(--fc);font-weight:800;font-size:1.7rem;text-transform:uppercase}
+.prod p{color:var(--muted);margin:.3em 0 1em}
+
+/* Papelería digital (franja) */
+.band{background:var(--grad);color:#1a0b04;border-radius:28px;padding:clamp(28px,5vw,60px);display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;overflow:hidden}
+.band h2{font-size:clamp(2.3rem,6vw,4.4rem)}
+.band p{font-size:1.12rem;margin:16px 0 22px;font-weight:500}
+.band ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.band li{background:rgba(26,11,4,.12);padding:.4em .85em;border-radius:999px;font-weight:700;font-size:.9rem}
+.band .btn{background:#1a0b04;color:#fff}
+.band img{border-radius:18px;box-shadow:0 30px 60px -20px rgba(0,0,0,.5);transform:rotate(2deg)}
+@media(max-width:820px){.band{grid-template-columns:1fr}.band img{transform:none}}
+
+/* Cotizador */
+.quote{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}
+@media(max-width:900px){.quote{grid-template-columns:1fr}}
+.qbox{background:var(--ink2);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.qstep{margin-bottom:24px}
+.qstep h4{font-family:var(--fc);font-weight:800;font-size:1.3rem;text-transform:uppercase;margin-bottom:10px}
+.qstep h4 em{font-style:normal;color:var(--yellow);margin-right:.4em}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{padding:.6em 1em;border-radius:12px;border:1.5px solid rgba(255,255,255,.18);font-weight:600;font-size:.93rem;transition:all .15s}
+.opt.on{background:var(--grad);color:#1a0b04;border-color:transparent}
+.qbox input{width:100%;padding:.85em 1em;border-radius:12px;background:var(--ink);border:1.5px solid var(--line);color:#fff;font:inherit}
+.qbox input:focus{outline:none;border-color:var(--orange)}
+.summary{position:sticky;top:90px;align-self:start;background:linear-gradient(170deg,#3a1b0c,#1d0d06);border:1px solid rgba(255,122,26,.35);border-radius:var(--r);padding:26px}
+.summary h4{font-family:var(--fc);font-size:1.6rem;text-transform:uppercase;margin-bottom:12px}
+.summary pre{white-space:pre-wrap;font-family:inherit;color:#f1dfcf;font-size:.95rem;background:rgba(0,0,0,.25);padding:14px;border-radius:12px;margin-bottom:16px;min-height:120px}
+.legal{font-size:.78rem;color:var(--muted);margin-top:12px}
+
+/* Planes */
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:22px}
+.plan{border-radius:var(--r);padding:24px;border:1px solid var(--line);background:var(--ink2)}
+.plan.hot{border:2px solid var(--orange);background:linear-gradient(170deg,#3a1b0c,var(--ink2))}
+.plan h3{font-family:var(--fc);font-weight:800;font-size:1.7rem;text-transform:uppercase}
+.plan .sub{color:var(--yellow);font-weight:700;margin-bottom:10px}
+.plan ul{list-style:none;color:var(--muted);display:grid;gap:6px}
+.plan li{padding-left:14px;position:relative}
+.plan li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--orange)}
+
+/* Proceso */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+@media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+.step{padding:24px;border-radius:var(--r);background:var(--ink2);border:1px solid var(--line);position:relative;overflow:hidden}
+.step b{font-family:var(--fc);font-weight:900;font-size:4.2rem;line-height:1;display:block}
+.step h3{font-family:var(--fc);font-size:1.45rem;text-transform:uppercase;margin:.2em 0}
+.step p{color:var(--muted);font-size:.95rem}
+
+/* Publicidad */
+.ads{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:center}
+@media(max-width:820px){.ads{grid-template-columns:1fr}}
+.mosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;transform:rotate(-3deg)}
+.mosaic img{border-radius:10px;aspect-ratio:1;object-fit:cover}
+
+/* Contacto */
+.contact{border-radius:28px;overflow:hidden;position:relative;isolation:isolate;padding:clamp(34px,6vw,80px)}
+.contact img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.contact::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(22,10,5,.95) 0%,rgba(22,10,5,.7) 60%,rgba(22,10,5,.4) 100%)}
+.contact h2{font-size:clamp(2.4rem,7vw,5rem);max-width:13ch}
+.contact .rows{display:grid;gap:6px;margin:22px 0 28px;font-size:1.08rem}
+.contact .rows span{color:var(--muted)}
+.live{display:inline-flex;align-items:center;gap:.6em;font-weight:700;padding:.45em .9em;border-radius:999px;background:rgba(0,0,0,.35);margin-bottom:18px;font-size:.92rem}
+.dot{width:9px;height:9px;border-radius:50%;background:#43d17a;box-shadow:0 0 0 0 rgba(67,209,122,.7);animation:pulse 1.8s infinite}
+.dot.off{background:var(--muted);animation:none}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(67,209,122,0)}100%{box-shadow:0 0 0 0 rgba(67,209,122,0)}}
+
+footer{padding:40px 0 110px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+footer .f{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+footer strong{color:var(--cream)}
+
+/* Botón flotante WhatsApp (texto, sin íconos) */
+.float{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.float a,.float button{padding:.85em 1.25em;border-radius:999px;font-weight:800;box-shadow:0 12px 30px -8px rgba(0,0,0,.6)}
+.fw{background:#25d366;color:#04230f}
+.fi{background:var(--cream);color:#1a0b04;display:none}
+
+/* Aparición al hacer scroll */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.track{animation:none}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a href="#" class="brand">Vibras <b>Positivas</b> HM<small data-i="tagline">SOLUCIONES DIGITALES · CAUCASIA</small></a>
+    <nav class="nav-links">
+      <a href="#servicios" data-i="nav1">Servicios</a>
+      <a href="#portafolio" data-i="nav2">Portafolio</a>
+      <a href="#productos" data-i="nav3">Productos</a>
+      <a href="#cotizar" data-i="nav4">Cotizar</a>
+      <a href="#contacto" data-i="nav5">Contacto</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Idioma">
+        <button data-l="es" class="on">ES</button><button data-l="en">EN</button>
+      </div>
+      <a href="#cotizar" class="btn btn-main btn-cta" data-i="navcta">Quiero mi app</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <video autoplay muted loop playsinline poster="media/hero-poster.jpg"><source src="media/hero.mp4" type="video/mp4"></video>
+  <div class="wrap">
+    <div class="kicker rv" data-i="heroK">Apps reales · negocios reales</div>
+    <h1 class="display rv"><span data-i="heroH">La app que</span><br><span class="rot gtext" id="rot"><span>tu pizzería</span></span><br><span data-i="heroH2">necesita</span></h1>
+    <p class="lead rv" data-i="heroP">Catálogos con pedidos por WhatsApp, citas, papelería digital y apps administrativas. Listas en días, funcionan en cualquier celular y se instalan como una app.</p>
+    <div class="ctas rv">
+      <a href="#cotizar" class="btn btn-main" data-i="heroB1">Cotiza gratis</a>
+      <a href="#portafolio" class="btn btn-ghost" data-i="heroB2">Mira las apps que hemos hecho</a>
+    </div>
+    <div class="stats rv">
+      <div class="stat"><b class="gtext" data-count="apps">0</b><span data-i="st1">apps publicadas para negocios</span></div>
+      <div class="stat"><b class="gtext" data-count="cats">0</b><span data-i="st2">sectores atendidos</span></div>
+      <div class="stat"><b class="gtext">3–10</b><span data-i="st3">días de entrega</span></div>
+      <div class="stat"><b class="gtext">ES · EN</b><span data-i="st4">apps en español e inglés</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CINTA DE FOTOS REALES -->
+<div class="ribbon" aria-label="Apps hechas">
+  <div class="track" id="tr1"></div>
+  <div class="track rev" id="tr2"></div>
+</div>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker" data-i="svK">Lo que hacemos</div>
+      <h2 class="display" data-i="svH">Tecnología que <span class="gtext">vende</span></h2>
+      <p data-i="svP">Cada app se hace con las fotos, los productos y los precios reales de tu negocio. Nada de plantillas genéricas.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc rv"><img loading="lazy" src="https://pizza-alex.netlify.app/img/og-pizzas-alex.jpg" alt=""><div class="in"><div class="num">01</div><h3 data-i="s1t">Apps para vender</h3><p data-i="s1p">Tu catálogo con fotos, precios y carrito. El pedido le llega armado a tu WhatsApp.</p></div></article>
+      <article class="svc rv"><img loading="lazy" src="https://haroldco45.github.io/cita-unas/og-image.png" alt=""><div class="in"><div class="num">02</div><h3 data-i="s2t">Citas y reservas</h3><p data-i="s2p">Tus clientes ven los horarios libres y separan solos. Tú ves la agenda del día.</p></div></article>
+      <article class="svc rv"><img loading="lazy" src="https://papeleria-vibras.netlify.app/og-image.png" alt=""><div class="in"><div class="num">03</div><h3 data-i="s3t">Papelería digital</h3><p data-i="s3p">Remisiones, recibos, cotizaciones y documentos con consecutivo. Deja de pagar talonarios.</p></div></article>
+      <article class="svc rv"><img loading="lazy" src="https://tendero-pos.netlify.app/og-image.png" alt=""><div class="in"><div class="num">04</div><h3 data-i="s4t">Apps administrativas</h3><p data-i="s4p">Caja, inventario, fiados, cartera, pedidos y reportes para tu equipo de ventas.</p></div></article>
+      <article class="svc rv"><img loading="lazy" src="https://active-english-academ.netlify.app/img/og.jpg" alt=""><div class="in"><div class="num">05</div><h3 data-i="s5t">Academias y capacitación</h3><p data-i="s5p">Cursos, inscripciones y material de estudio en una app que tus estudiantes instalan.</p></div></article>
+      <article class="svc rv"><img loading="lazy" src="https://pronalce-navidad.netlify.app/img/og.jpg" alt=""><div class="in"><div class="num">06</div><h3 data-i="s6t">Promociones y lanzamientos</h3><p data-i="s6p">Apps de temporada para proveedores y distribuidoras: ofertas, códigos y pedido al vendedor.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- PORTAFOLIO -->
+<section id="portafolio" style="background:var(--ink2)">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker" data-i="pfK">Portafolio vivo</div>
+      <h2 class="display"><span data-i="pfH">Apps que ya están</span> <span class="gtext" data-i="pfH2">trabajando</span></h2>
+      <p data-i="pfP">Ábrelas y pruébalas. Si te gusta una, toca «Quiero una así» y te armamos la tuya.</p>
+    </div>
+    <div class="filters rv" id="filters"></div>
+    <input class="search rv" id="q" type="search" placeholder="Buscar: pizza, miel, inglés, Caucasia..." data-ph="pfS">
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" data-i="pfE">No encontramos esa app. Escríbenos y la hacemos.</p>
+    <div class="private rv">
+      <h4 data-i="pvH">Además, apps privadas en uso diario</h4>
+      <ul id="priv"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTOS LISTOS -->
+<section id="productos">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker" data-i="prK">Listas para usar</div>
+      <h2 class="display"><span data-i="prH">Productos</span> <span class="gtext">Vibras</span></h2>
+      <p data-i="prP">Apps ya hechas que se adaptan a tu negocio con tu nombre, tu logo y tus datos.</p>
+    </div>
+    <div class="prod-grid" id="prods"></div>
+  </div>
+</section>
+
+<!-- PAPELERÍA DIGITAL -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="band rv">
+      <div>
+        <div class="kicker" style="color:#1a0b04" data-i="bdK">Nueva línea</div>
+        <h2 class="display" data-i="bdH">Lo que mandas a la tipografía, ahora en el celular</h2>
+        <p data-i="bdP">Digitalizamos los formatos de tu empresa con tu logo, consecutivo y firma. Se llenan en el celular, se imprimen en blanco o llenos y se envían por WhatsApp. Ya lo usa Distrileco con su documento equivalente a la factura.</p>
+        <ul>
+          <li data-i="bd1">Remisiones</li><li data-i="bd2">Recibos de caja</li><li data-i="bd3">Cotizaciones</li><li data-i="bd4">Pedidos</li><li data-i="bd5">Órdenes de servicio</li><li data-i="bd6">Documento equivalente</li>
+        </ul>
+        <a class="btn" href="https://papeleria-vibras.netlify.app/" target="_blank" rel="noopener" data-i="bdB">Ver Papelería Digital</a>
+      </div>
+      <img loading="lazy" src="https://papeleria-vibras.netlify.app/og-image.png" alt="Papelería Digital">
+    </div>
+  </div>
+</section>
+
+<!-- COTIZADOR -->
+<section id="cotizar" style="background:var(--ink2)">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker" data-i="qK">Cotiza en 1 minuto</div>
+      <h2 class="display"><span data-i="qH">Arma tu app</span> <span class="gtext" data-i="qH2">aquí mismo</span></h2>
+      <p data-i="qP">Escoge lo que necesitas y nos llega por WhatsApp. La cotización no tiene costo.</p>
+    </div>
+    <div class="quote">
+      <div class="qbox rv">
+        <div class="qstep"><h4><em>1</em><span data-i="q1">¿Qué negocio tienes?</span></h4><div class="opts" data-group="biz" data-single="1"></div></div>
+        <div class="qstep"><h4><em>2</em><span data-i="q2">¿Qué debe hacer la app?</span></h4><div class="opts" data-group="feat"></div></div>
+        <div class="qstep"><h4><em>3</em><span data-i="q3">¿Para cuándo?</span></h4><div class="opts" data-group="when" data-single="1"></div></div>
+        <div class="qstep"><h4><em>4</em><span data-i="q4">Tu nombre y tu negocio</span></h4><input id="qname" maxlength="80" placeholder="Ej: Marta, Panadería La Espiga" data-ph="q4p"></div>
+        <p class="legal" data-i="qLegal">Tus datos no se guardan en esta página: solo se arma el mensaje que tú decides enviar por WhatsApp. Tratamiento de datos según la Ley 1581 de 2012.</p>
+      </div>
+      <aside class="summary rv">
+        <h4 data-i="qSum">Tu mensaje</h4>
+        <pre id="qmsg"></pre>
+        <a id="qsend" class="btn btn-main" target="_blank" rel="noopener" style="width:100%;justify-content:center" data-i="qSend">Enviar por WhatsApp</a>
+      </aside>
+    </div>
+
+    <div class="plans">
+      <div class="plan rv"><h3 data-i="pl1">Licencia 6 meses</h3><div class="sub" data-i="pl1s">Para arrancar</div><ul><li data-i="pl1a">App con tu marca y tus fotos</li><li data-i="pl1b">Pedidos a tu WhatsApp</li><li data-i="pl1c">Publicada y lista para compartir</li></ul></div>
+      <div class="plan hot rv"><h3 data-i="pl2">Licencia anual</h3><div class="sub" data-i="pl2s">La más pedida</div><ul><li data-i="pl2a">Todo lo de 6 meses</li><li data-i="pl2b">Cambios de precios y productos</li><li data-i="pl2c">Flyer e imágenes para redes</li><li data-i="pl2d">Español e inglés</li></ul></div>
+      <div class="plan rv"><h3 data-i="pl3">A la medida</h3><div class="sub" data-i="pl3s">Empresas</div><ul><li data-i="pl3a">Apps administrativas y portales</li><li data-i="pl3b">Conexión con tu sistema</li><li data-i="pl3c">Papelería digital de la empresa</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section>
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker" data-i="psK">Así trabajamos</div>
+      <h2 class="display" data-i="psH">De tu volante a tu app</h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><b class="gtext">01</b><h3 data-i="p1t">Nos cuentas</h3><p data-i="p1p">Mándanos por WhatsApp tu volante, fotos, precios o tu Instagram.</p></div>
+      <div class="step rv"><b class="gtext">02</b><h3 data-i="p2t">La armamos</h3><p data-i="p2p">Diseñamos la app con tus fotos reales y te mostramos el avance.</p></div>
+      <div class="step rv"><b class="gtext">03</b><h3 data-i="p3t">La publicamos</h3><p data-i="p3p">Te entregamos el enlace con vista previa y el flyer para tus redes.</p></div>
+      <div class="step rv"><b class="gtext">04</b><h3 data-i="p4t">A vender</h3><p data-i="p4p">Compártela en estados, grupos y redes. Los pedidos te llegan directo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICIDAD -->
+<section style="background:var(--ink2);overflow:hidden">
+  <div class="wrap ads">
+    <div class="mosaic rv" id="mosaic"></div>
+    <div class="rv">
+      <div class="kicker" data-i="adK">Publicidad</div>
+      <h2 class="display" style="font-size:clamp(2.3rem,6vw,4rem);margin:.3em 0" data-i="adH">Anuncia tu negocio dentro de nuestras apps</h2>
+      <p style="color:var(--muted);font-size:1.1rem;margin-bottom:22px" data-i="adP">Nuestras apps ciudadanas y de negocios se comparten todos los días en Caucasia, el Bajo Cauca y Colombia. Pon ahí tu marca con un aviso pequeño que lleva a tu WhatsApp.</p>
+      <a class="btn btn-main" id="adbtn" target="_blank" rel="noopener" data-i="adB">Quiero anunciar</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="wrap">
+    <div class="contact rv">
+      <img loading="lazy" src="https://villa-sonada.netlify.app/media/og-villa.jpg" alt="">
+      <div class="live"><span class="dot" id="dot"></span><span id="clock">Caucasia</span></div>
+      <h2 class="display"><span data-i="ctH">Hablemos de</span> <span class="gtext" data-i="ctH2">tu app</span></h2>
+      <div class="rows">
+        <div><span>WhatsApp</span> &nbsp;<strong>+57 311 770 0431</strong></div>
+        <div><span data-i="ctMail">Correo</span> &nbsp;<strong>haroldco45@gmail.com</strong></div>
+        <div><span data-i="ctAddr">Dirección</span> &nbsp;<strong>Cra 21B N.º 13A-64, Colinas del Portal, Caucasia, Antioquia</strong></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <a class="btn btn-main" id="ctwa" target="_blank" rel="noopener" data-i="ctB">Escríbenos por WhatsApp</a>
+        <a class="btn btn-ghost" href="mailto:haroldco45@gmail.com" data-i="ctB2">Enviar correo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap f">
+    <div><strong>Desarrollada por Vibras Positivas HM — Derechos de Autor Reservados</strong><br>Harold Augusto Marín Machado · Caucasia, Antioquia, Colombia</div>
+    <div><span data-i="ftUpd">Actualizado</span>: <span id="upd">9 nov 2026</span> · <span data-i="ftTz">Hora de Colombia (UTC-5)</span></div>
+  </div>
+</footer>
+
+<div class="float">
+  <button class="fi" id="install" data-i="inst">Instalar app</button>
+  <a class="fw" id="fwa" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+/* ========= DATOS: para agregar una app nueva, copia una línea y cambia los datos ========= */
+const WA = '573117700431';
+const CATS = {
+  comida:   {es:'Comida y bebida', en:'Food & drinks'},
+  belleza:  {es:'Belleza y bienestar', en:'Beauty & wellness'},
+  comercio: {es:'Hogar y detalles', en:'Home & gifts'},
+  educacion:{es:'Educación y agro', en:'Education & farming'},
+  turismo:  {es:'Turismo', en:'Tourism'},
+  empresas: {es:'Empresas y distribución', en:'Companies & distribution'}
+};
+const APPS = [
+ {n:'Pizzas Alex', c:'comida', es:'Pizzería con pedidos a domicilio por WhatsApp. Caucasia.', en:'Pizzeria with home delivery orders via WhatsApp. Caucasia.', u:'https://pizza-alex.netlify.app/', i:'https://pizza-alex.netlify.app/img/og-pizzas-alex.jpg'},
+ {n:'La Paila China', c:'comida', es:'Almuerzos, arroz chino y desayunos con pedido en línea. Caucasia.', en:'Lunches, Chinese rice and breakfasts with online ordering. Caucasia.', u:'https://paila-china.netlify.app/', i:'https://paila-china.netlify.app/img/og.jpg'},
+ {n:'DeliArepas de Suleima', c:'comida', es:'Arepas con queso fundido, pedido directo al WhatsApp. Caucasia.', en:'Cheese-filled arepas, orders straight to WhatsApp. Caucasia.', u:'https://haroldco45.github.io/deliarepa/', i:'https://haroldco45.github.io/deliarepa/og-deliarepa.jpg'},
+ {n:'Freseate', c:'comida', es:'Fresas con chocolate y crema: arma tu vaso y pide a domicilio. Medellín.', en:'Strawberries with chocolate and cream: build your cup and order. Medellín.', u:'https://freseate-medellin.netlify.app/', i:'https://freseate-medellin.netlify.app/og-image.jpg'},
+ {n:'La Heladería', c:'comida', es:'Cuchareables y helados en La Ye. Caucasia.', en:'Spoon desserts and ice cream in La Ye. Caucasia.', u:'https://la-heladeria-caucasi.netlify.app/', i:'https://la-heladeria-caucasi.netlify.app/og-image.jpg'},
+ {n:'Antojos de Yeison', c:'comida', es:'Postres de fresa con toma y registro de pedidos.', en:'Strawberry desserts with order taking and records.', u:'https://antojos-yeison.netlify.app/', i:'https://antojos-yeison.netlify.app/img/og.jpg'},
+ {n:'Esencias y Sabores', c:'comida', es:'Sales, salsas y ajíes caseros. Caucasia.', en:'Homemade seasoning salts, sauces and hot peppers. Caucasia.', u:'https://esencias-y-sabores.netlify.app/', i:'https://esencias-y-sabores.netlify.app/img/og.jpg'},
+ {n:'Cava Ancestral', c:'comida', es:'Vinos y licores artesanales de la región. Caucasia.', en:'Craft wines and spirits from the region. Caucasia.', u:'https://cava-ancestra.netlify.app/', i:'https://cava-ancestra.netlify.app/img/og-image.jpg'},
+ {n:'Panela Sabor y Placer', c:'comida', es:'Panela pulverizada 100 % natural de Yalí, Antioquia.', en:'100% natural powdered panela from Yalí, Antioquia.', u:'https://panela-sabor-y-placer.netlify.app/', i:'https://panela-sabor-y-placer.netlify.app/og.jpg'},
+ {n:'Apiarios G&O', c:'comida', es:'Miel pura y polen de abeja. Caucasia.', en:'Pure honey and bee pollen. Caucasia.', u:'https://apiarios-go.netlify.app/', i:'https://apiarios-go.netlify.app/og-image.jpg'},
+ {n:'Apigold', c:'comida', es:'Miel de Remedios, del panal a tu mesa.', en:'Honey from Remedios, from hive to table.', u:'https://haroldco45.github.io/apigold/', i:'https://haroldco45.github.io/apigold/puesto.jpg'},
+ {n:'MielesJJ', c:'comida', es:'Miel 100 % natural de Remedios, Antioquia.', en:'100% natural honey from Remedios, Antioquia.', u:'https://haroldco45.github.io/mielesjj/', i:'https://haroldco45.github.io/mielesjj/panales.jpg'},
+ {n:'Kamo Café', c:'comida', es:'Café y cacao familiar de la vereda Las Agüitas, Ituango.', en:'Family coffee and cacao from Las Agüitas, Ituango.', u:'https://haroldco45.github.io/kamo-cafe/', i:'https://haroldco45.github.io/kamo-cafe/og-kamo.jpg'},
+ {n:'Yorledis Ramos', c:'belleza', es:'Belleza y cuidado de la piel con Mary Kay. Caucasia.', en:'Beauty and skin care with Mary Kay. Caucasia.', u:'https://yorledis-ramos.netlify.app/', i:'https://yorledis-ramos.netlify.app/img/og.jpg'},
+ {n:'Sonia Narváez · Celion', c:'belleza', es:'Bienestar Celion con pedidos por WhatsApp. Caucasia.', en:'Celion wellness products with WhatsApp orders. Caucasia.', u:'https://sonia-narvaez-celion.netlify.app/', i:'https://sonia-narvaez-celion.netlify.app/img/og.jpg'},
+ {n:'Mascarillas Artistry', c:'belleza', es:'Mascarillas Vitamina C y Omega con pedido al asesor.', en:'Vitamin C and Omega face masks, order from your advisor.', u:'https://haroldco45.github.io/mascarillas-artistry/', i:'https://haroldco45.github.io/mascarillas-artistry/og.jpg'},
+ {n:'Regalos con Alina', c:'belleza', es:'Kits de Navidad O Boticário para vender por WhatsApp.', en:'O Boticário Christmas kits sold via WhatsApp.', u:'https://haroldco45.github.io/regalos-alina/', i:'https://haroldco45.github.io/regalos-alina/og.jpg'},
+ {n:'Bethel Group · Royal Prestige', c:'comercio', es:'Distribuidor autorizado Royal Prestige: catálogo y demostración a domicilio.', en:'Authorized Royal Prestige dealer: catalog and home demos.', u:'https://bethel-royal-prestige.netlify.app/', i:'https://bethel-royal-prestige.netlify.app/images/og.jpg'},
+ {n:'Like Plants', c:'comercio', es:'Plantas, matas y decoración natural. Caucasia.', en:'Plants and natural decor. Caucasia.', u:'https://like-plants.netlify.app/', i:'https://like-plants.netlify.app/og-image.jpg'},
+ {n:'Cindy López Accesorios', c:'comercio', es:'Accesorios hechos a mano: crochet, strap y resina.', en:'Handmade accessories: crochet, straps and resin.', u:'https://cindy-lopez-accesorios.netlify.app/', i:'https://cindy-lopez-accesorios.netlify.app/og-image.jpg'},
+ {n:'Adriana Castro', c:'comercio', es:'Crochet, anchetas y productos hechos con amor.', en:'Crochet, gift baskets and handmade products.', u:'https://adriana-castro.netlify.app/', i:'https://adriana-castro.netlify.app/og-image.jpg'},
+ {n:'Active English Academy', c:'educacion', es:'Inglés conversacional para niños, jóvenes y adultos. Caucasia.', en:'Conversational English for kids, teens and adults. Caucasia.', u:'https://active-english-academ.netlify.app/', i:'https://active-english-academ.netlify.app/img/og.jpg'},
+ {n:'ULC Corporation', c:'educacion', es:'Academia de inglés en Caucasia, El Bagre y Montelíbano.', en:'English academy in Caucasia, El Bagre and Montelíbano.', u:'https://ulc-de-caucasia.netlify.app/', i:'https://ulc-de-caucasia.netlify.app/og-ulc-v3.jpg'},
+ {n:'El Mayordomo', c:'educacion', es:'Escuela de mayordomía: pastos, salud animal y registro ganadero.', en:'Farm-manager school: pastures, animal health and cattle records.', u:'https://pastos-mayordomia.netlify.app/', i:'https://pastos-mayordomia.netlify.app/og.png'},
+ {n:'Arándano Pro', c:'educacion', es:'Guía del arandanero con calculadoras y bitácora de la finca.', en:'Blueberry grower guide with calculators and farm log.', u:'https://arandano-pro.netlify.app/', i:'https://arandano-pro.netlify.app/og-image.jpg'},
+ {n:'La Villa Soñada', c:'turismo', es:'Pasadía campestre con piscina, Km 5 vía Planeta Rica.', en:'Country day pass with pool, Km 5 road to Planeta Rica.', u:'https://villa-sonada.netlify.app/', i:'https://villa-sonada.netlify.app/media/og-villa.jpg'},
+ {n:'Cartagena + Isla Barú', c:'turismo', es:'Excursión con reservas y código de referido.', en:'Group trip with bookings and referral code.', u:'https://haroldco45.github.io/cartagena-isla-baru/', i:'https://haroldco45.github.io/cartagena-isla-baru/og.jpg'},
+ {n:'Jardín · Viajamax', c:'turismo', es:'Pasadía Jardín, Hispania y Andes desde Medellín.', en:'Day trip to Jardín, Hispania and Andes from Medellín.', u:'https://haroldco45.github.io/jardin-suroeste/', i:'https://haroldco45.github.io/jardin-suroeste/img/og-image.jpg'},
+ {n:'RPG-BC', c:'empresas', es:'Región de Planeación y Gestión del Bajo Cauca: 6 municipios en una app.', en:'Bajo Cauca Planning and Management Region: 6 towns in one app.', u:'https://rpg-bajocauca.netlify.app/', i:'https://rpg-bajocauca.netlify.app/og.jpg'},
+ {n:'Pronalce · Navidad', c:'empresas', es:'Temporada navideña del proveedor para la fuerza de ventas de Distrileco.', en:'Supplier Christmas season for the Distrileco sales force.', u:'https://pronalce-navidad.netlify.app/', i:'https://pronalce-navidad.netlify.app/img/og.jpg'},
+ {n:'Proleche 900 ml', c:'empresas', es:'Oferta pague 10 lleve 11 para vender con todos los vendedores.', en:'Buy-10-get-11 offer for the whole sales team.', u:'https://haroldco45.github.io/proleche-900/', i:'https://haroldco45.github.io/proleche-900/img/og.jpg'},
+ {n:'Promociones Nutresa', c:'empresas', es:'Promos del mes con pedido al vendedor por WhatsApp.', en:'Monthly promos with WhatsApp orders to the sales rep.', u:'https://haroldco45.github.io/nutresa-promos/', i:'https://haroldco45.github.io/nutresa-promos/og.png'},
+ {n:'Mesa Navideña Zenú', c:'empresas', es:'Catálogo navideño con pedidos al asesor.', en:'Christmas catalog with orders to the advisor.', u:'https://haroldco45.github.io/zenu-navidad/', i:'https://haroldco45.github.io/zenu-navidad/og.jpg'},
+ {n:'Golpe a Golpe', c:'empresas', es:'App motivacional para el equipo de ventas: toda meta sí se puede.', en:'Motivational app for the sales team: every goal is possible.', u:'https://golpe-a-golpes.netlify.app/', i:'https://golpe-a-golpes.netlify.app/og.jpg'}
+];
+const PRODS = [
+ {n:'Tendero', es:'Caja, inventario y fiados para la tienda de barrio. Funciona sin internet.', en:'Cash register, inventory and credit for neighborhood stores. Works offline.', u:'https://tendero-pos.netlify.app/', i:'https://tendero-pos.netlify.app/og-image.png'},
+ {n:'Fiado', es:'Cuaderno digital del tendero: quién debe, cuánto y recordatorio por WhatsApp.', en:'Digital credit book: who owes, how much, with WhatsApp reminders.', u:'https://haroldco45.github.io/fiado-cuadernodigitaldeltendero/', i:'https://haroldco45.github.io/fiado-cuadernodigitaldeltendero/tendero-fiado-og.png'},
+ {n:'Citas en línea', es:'Agenda para uñas, barberías, spa y consultorios: el cliente separa solo.', en:'Booking for nail salons, barbers, spas and offices: clients book themselves.', u:'https://cita-unas.netlify.app/', i:'https://haroldco45.github.io/cita-unas/og-image.png'},
+ {n:'Precios al Día', es:'Lista de precios desde Excel para varios negocios, cada uno con su enlace.', en:'Price list from Excel for several stores, each with its own link.', u:'', i:'https://precios-andres.netlify.app/og-image.png'},
+ {n:'Papelería Digital', es:'Remisiones, recibos y cotizaciones con consecutivo y tu logo.', en:'Delivery notes, receipts and quotes with numbering and your logo.', u:'https://papeleria-vibras.netlify.app/', i:'https://papeleria-vibras.netlify.app/og-image.png'},
+ {n:'Estados Financieros Fácil', es:'Aprende y arma los 4 estados financieros de tu negocio.', en:'Learn and build your business\'s 4 financial statements.', u:'https://haroldco45.github.io/estados-financieros/', i:'https://haroldco45.github.io/estados-financieros/og-image.png'}
+];
+const PRIVATE = ['Portal Vendedor Distrileco','Portal Gerencial','Portal de Recaudos','Tienda Distrileco','Documento equivalente Distrileco','Torneo de Goles 2026','Concurso Mundial 2026','Natillera La Fortuna','CDA Bajo Cauca','Criollitas · menú digital','Entrenador Deportivo Online'];
+
+/* ========= TEXTOS ES / EN ========= */
+const T = {
+ en:{tagline:'DIGITAL SOLUTIONS · CAUCASIA',nav1:'Services',nav2:'Portfolio',nav3:'Products',nav4:'Get a quote',nav5:'Contact',navcta:'I want my app',
+ heroK:'Real apps · real businesses',heroH:'The app',heroH2:'needs',heroP:'Catalogs with WhatsApp ordering, bookings, digital paperwork and management apps. Ready in days, they run on any phone and install like an app.',heroB1:'Free quote',heroB2:'See the apps we have built',
+ st1:'apps published for businesses',st2:'industries served',st3:'days to deliver',st4:'apps in Spanish and English',
+ svK:'What we do',svH:'Technology that <span class="gtext">sells</span>',svP:'Every app is built with your business\'s real photos, products and prices. No generic templates.',
+ s1t:'Apps that sell',s1p:'Your catalog with photos, prices and a cart. The order arrives ready on your WhatsApp.',s2t:'Bookings',s2p:'Clients see open slots and book on their own. You see the day\'s schedule.',s3t:'Digital paperwork',s3p:'Delivery notes, receipts, quotes and documents with numbering. Stop paying for printed pads.',s4t:'Management apps',s4p:'Cash, inventory, credit, receivables, orders and reports for your sales team.',s5t:'Academies & training',s5p:'Courses, sign-ups and study material in an app your students install.',s6t:'Promos & launches',s6p:'Seasonal apps for suppliers and distributors: offers, codes and orders to the sales rep.',
+ pfK:'Live portfolio',pfH:'Apps already',pfH2:'at work',pfP:'Open them and try them. If you like one, tap "I want one like this" and we\'ll build yours.',pfS:'Search: pizza, honey, English, Caucasia...',pfE:'We could not find that app. Write to us and we\'ll build it.',pvH:'Plus private apps in daily use',all:'All',ver:'Open app',want:'I want one like this',demo:'Ask for a demo',
+ prK:'Ready to use',prH:'Vibras',prP:'Ready-made apps adapted to your business with your name, logo and data.',
+ bdK:'New line',bdH:'What you send to the print shop, now on your phone',bdP:'We digitize your company forms with your logo, numbering and signature. Fill them on the phone, print them blank or filled, and send them via WhatsApp. Distrileco already uses it for its invoice-equivalent document.',bd1:'Delivery notes',bd2:'Cash receipts',bd3:'Quotes',bd4:'Orders',bd5:'Service orders',bd6:'Invoice-equivalent document',bdB:'See Digital Paperwork',
+ qK:'Quote in 1 minute',qH:'Build your app',qH2:'right here',qP:'Pick what you need and it reaches us on WhatsApp. Quotes are free.',q1:'What business do you have?',q2:'What should the app do?',q3:'When do you need it?',q4:'Your name and business',q4p:'E.g.: Marta, La Espiga Bakery',qLegal:'Your data is not stored on this page: it only builds the message you choose to send on WhatsApp. Data handled under Colombian Law 1581 of 2012.',qSum:'Your message',qSend:'Send on WhatsApp',
+ pl1:'6-month license',pl1s:'To get started',pl1a:'App with your brand and photos',pl1b:'Orders to your WhatsApp',pl1c:'Published and ready to share',pl2:'Yearly license',pl2s:'Most popular',pl2a:'Everything in 6 months',pl2b:'Price and product updates',pl2c:'Flyer and social images',pl2d:'Spanish and English',pl3:'Custom',pl3s:'Companies',pl3a:'Management apps and portals',pl3b:'Connection to your system',pl3c:'Company digital paperwork',
+ psK:'How we work',psH:'From your flyer to your app',p1t:'Tell us',p1p:'Send us your flyer, photos, prices or Instagram on WhatsApp.',p2t:'We build it',p2p:'We design the app with your real photos and show you the progress.',p3t:'We publish it',p3p:'You get the link with preview image and a flyer for social media.',p4t:'Start selling',p4p:'Share it in statuses, groups and social media. Orders come straight to you.',
+ adK:'Advertising',adH:'Advertise your business inside our apps',adP:'Our citizen and business apps are shared every day in Caucasia, Bajo Cauca and Colombia. Put your brand there with a small ad that leads to your WhatsApp.',adB:'I want to advertise',
+ ctH:'Let\'s talk about',ctH2:'your app',ctMail:'Email',ctAddr:'Address',ctB:'Message us on WhatsApp',ctB2:'Send email',ftUpd:'Updated',ftTz:'Colombia time (UTC-5)',inst:'Install app'}
+};
+const ROT = {es:['tu pizzería','tu tienda','tu academia','tu finca','tu empresa','tu emprendimiento','tu restaurante'], en:['your pizzeria','your store','your academy','your farm','your company','your startup','your restaurant']};
+const Q = {
+ biz:{es:['Comida o restaurante','Tienda o minimercado','Belleza o spa','Academia o colegio','Turismo','Distribuidora o empresa','Finca o agro','Otro'],en:['Food or restaurant','Store or mini-market','Beauty or spa','Academy or school','Tourism','Distributor or company','Farm or agro','Other']},
+ feat:{es:['Catálogo con fotos y precios','Pedidos a mi WhatsApp','Citas y reservas','Inventario y caja','Cartera y cobros','Papelería digital','Inscripciones','Promociones y códigos','Panel administrativo','Español e inglés'],en:['Catalog with photos and prices','Orders to my WhatsApp','Bookings','Inventory and cash','Receivables and collections','Digital paperwork','Sign-ups','Promos and codes','Admin panel','Spanish and English']},
+ when:{es:['Esta semana','Este mes','Estoy averiguando'],en:['This week','This month','Just exploring']}
+};
+
+/* ========= MOTOR ========= */
+let L = 'es';
+try{ L = localStorage.getItem('vp-lang') === 'en' ? 'en' : 'es'; }catch(e){}
+const ES = {}; document.querySelectorAll('[data-i]').forEach(el=>ES[el.dataset.i]=el.innerHTML);
+document.querySelectorAll('[data-ph]').forEach(el=>ES[el.dataset.ph]=el.placeholder);
+ES.all='Todas'; ES.ver='Ver app'; ES.want='Quiero una así'; ES.demo='Pide una demo';
+const t = k => (L==='en' && T.en[k]) || ES[k] || k;
+const wa = msg => `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+const esc = s => s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let cat='all';
+
+function card(a){
+  const msg = L==='en' ? `Hi Harold, I saw the ${a.n} app on vibraspositivashm.com and I want one like it for my business.` : `Hola Harold, vi la app de ${a.n} en vibraspositivashm.com y quiero una así para mi negocio.`;
+  return `<article class="app rv in"><div class="ph"><div class="fallback">${esc(a.n)}</div><img loading="lazy" src="${a.i}" alt="${esc(a.n)}" onerror="this.remove()"><span class="tag">${CATS[a.c][L]}</span></div>
+  <div class="bd"><h3>${esc(a.n)}</h3><p>${esc(a[L])}</p><div class="acts"><a class="a-ver" href="${a.u}" target="_blank" rel="noopener">${t('ver')}</a><a class="a-want" href="${wa(msg)}" target="_blank" rel="noopener">${t('want')}</a></div></div></article>`;
+}
+function renderGrid(){
+  const q=(document.getElementById('q').value||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+  const list=APPS.filter(a=>(cat==='all'||a.c===cat)&&(!q||(a.n+' '+a.es+' '+a.en+' '+CATS[a.c].es).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').includes(q)));
+  document.getElementById('grid').innerHTML=list.map(card).join('');
+  document.getElementById('empty').style.display=list.length?'none':'block';
+}
+function renderFilters(){
+  const counts={}; APPS.forEach(a=>counts[a.c]=(counts[a.c]||0)+1);
+  const f=document.getElementById('filters');
+  f.innerHTML=`<button class="chip ${cat==='all'?'on':''}" data-c="all">${t('all')}<i>${APPS.length}</i></button>`+Object.keys(CATS).map(k=>`<button class="chip ${cat===k?'on':''}" data-c="${k}">${CATS[k][L]}<i>${counts[k]||0}</i></button>`).join('');
+  f.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{cat=b.dataset.c;renderFilters();renderGrid();});
+}
+function renderProds(){
+  document.getElementById('prods').innerHTML=PRODS.map(p=>{
+    const msg=L==='en'?`Hi Harold, I'm interested in ${p.n} for my business.`:`Hola Harold, me interesa ${p.n} para mi negocio.`;
+    return `<article class="prod rv in"><img loading="lazy" src="${p.i}" alt="${esc(p.n)}" onerror="this.style.display='none'"><div class="bd"><h3>${esc(p.n)}</h3><p>${esc(p[L])}</p><div style="display:flex;gap:8px;flex-wrap:wrap">${p.u?`<a class="btn btn-ghost" style="padding:.7em 1.2em" href="${p.u}" target="_blank" rel="noopener">${t('ver')}</a>`:''}<a class="btn btn-main" style="padding:.7em 1.2em" href="${wa(msg)}" target="_blank" rel="noopener">${p.u?t('want'):t('demo')}</a></div></div></article>`;}).join('');
+}
+function renderRibbon(){
+  const half=Math.ceil(APPS.length/2), a1=APPS.slice(0,half), a2=APPS.slice(half).concat(PRODS);
+  const h=arr=>arr.map(a=>`<a href="${a.u||'#productos'}" target="_blank" rel="noopener" title="${esc(a.n)}"><img loading="lazy" src="${a.i}" alt="${esc(a.n)}" onerror="this.parentNode.remove()"></a>`).join('');
+  document.getElementById('tr1').innerHTML=h(a1)+h(a1);
+  document.getElementById('tr2').innerHTML=h(a2)+h(a2);
+  document.getElementById('mosaic').innerHTML=APPS.filter((_,i)=>i%4===0).slice(0,9).map(a=>`<img loading="lazy" src="${a.i}" alt="" onerror="this.remove()">`).join('');
+}
+document.getElementById('priv').innerHTML=PRIVATE.map(p=>`<li>${esc(p)}</li>`).join('');
+
+/* Cotizador */
+const sel={biz:[],feat:[],when:[]};
+function renderQuote(){
+  document.querySelectorAll('.opts').forEach(box=>{
+    const g=box.dataset.group;
+    box.innerHTML=Q[g][L].map((o,i)=>`<button class="opt ${sel[g].includes(i)?'on':''}" data-i="${i}">${o}</button>`).join('');
+    box.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{
+      const i=+b.dataset.i;
+      if(box.dataset.single) sel[g]=sel[g][0]===i?[]:[i];
+      else sel[g]=sel[g].includes(i)?sel[g].filter(x=>x!==i):[...sel[g],i];
+      renderQuote();
+    });
+  });
+  buildMsg();
+}
+function buildMsg(){
+  const name=document.getElementById('qname').value.trim();
+  const pick=g=>sel[g].map(i=>Q[g][L][i]).join(', ');
+  const en=L==='en';
+  let m=en?'Hi Harold, I want a quote for an app with Vibras Positivas HM.':'Hola Harold, quiero cotizar una app con Vibras Positivas HM.';
+  if(name) m+=`\n${en?'I am':'Soy'}: ${name}`;
+  if(sel.biz.length) m+=`\n${en?'Business':'Negocio'}: ${pick('biz')}`;
+  if(sel.feat.length) m+=`\n${en?'The app should have':'La app debe tener'}: ${pick('feat')}`;
+  if(sel.when.length) m+=`\n${en?'When':'Para cuándo'}: ${pick('when')}`;
+  document.getElementById('qmsg').textContent=m;
+  document.getElementById('qsend').href=wa(m);
+}
+document.getElementById('qname').addEventListener('input',buildMsg);
+
+/* Idioma */
+function applyLang(){
+  document.documentElement.lang=L;
+  document.querySelectorAll('[data-i]').forEach(el=>el.innerHTML=t(el.dataset.i));
+  document.querySelectorAll('[data-ph]').forEach(el=>el.placeholder=t(el.dataset.ph));
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===L));
+  const en=L==='en';
+  document.getElementById('fwa').href=wa(en?'Hi Harold, I want information about your digital services.':'Hola Harold, quiero información sobre sus servicios digitales.');
+  document.getElementById('ctwa').href=wa(en?'Hi Harold, I want to quote an app for my business with Vibras Positivas HM.':'Hola Harold, quiero cotizar una app para mi negocio con Vibras Positivas HM.');
+  document.getElementById('adbtn').href=wa(en?'Hi Harold, I want to advertise my business inside the Vibras Positivas HM apps.':'Hola Harold, quiero anunciar mi negocio dentro de las apps de Vibras Positivas HM.');
+  renderFilters();renderGrid();renderProds();renderQuote();tick();
+}
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>{L=b.dataset.l;try{localStorage.setItem('vp-lang',L)}catch(e){}applyLang();});
+
+/* Palabra que rota en el titular */
+let ri=0; setInterval(()=>{ri=(ri+1)%ROT[L].length;document.getElementById('rot').innerHTML=`<span>${ROT[L][ri]}</span>`;},2200);
+
+/* Hora real de Colombia y estado de atención */
+function tick(){
+  const now=new Date();
+  const hm=new Intl.DateTimeFormat(L==='en'?'en-US':'es-CO',{timeZone:'America/Bogota',hour:'numeric',minute:'2-digit'}).format(now);
+  const p=Object.fromEntries(new Intl.DateTimeFormat('en-US',{timeZone:'America/Bogota',hour:'numeric',hourCycle:'h23',weekday:'short'}).formatToParts(now).map(x=>[x.type,x.value]));
+  const h=+p.hour, open=h>=7&&h<20;
+  document.getElementById('dot').classList.toggle('off',!open);
+  document.getElementById('clock').textContent=`${L==='en'?'Caucasia':'Caucasia'} ${hm} · ${open?(L==='en'?'Answering now':'Atendiendo ahora'):(L==='en'?'We reply first thing tomorrow':'Respondemos mañana temprano')}`;
+}
+setInterval(tick,30000);
+
+/* Contadores */
+function countUp(){
+  const vals={apps:APPS.length+PRODS.length,cats:Object.keys(CATS).length};
+  document.querySelectorAll('[data-count]').forEach(el=>{
+    const end=vals[el.dataset.count]; let s=null;
+    const step=ts=>{s=s||ts;const k=Math.min((ts-s)/1400,1);el.textContent=Math.round(end*(1-Math.pow(1-k,3)))+(el.dataset.count==='apps'&&k===1?'+':'');if(k<1)requestAnimationFrame(step);};
+    requestAnimationFrame(step);
+  });
+}
+
+/* Animaciones de entrada */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+addEventListener('scroll',()=>document.getElementById('top').classList.toggle('solid',scrollY>40),{passive:true});
+
+document.getElementById('q').addEventListener('input',renderGrid);
+renderRibbon(); applyLang(); countUp();
+
+/* PWA: instalar */
+let deferred;
+addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferred=e;document.getElementById('install').style.display='block';});
+document.getElementById('install').onclick=async()=>{if(!deferred)return;deferred.prompt();await deferred.userChoice;deferred=null;document.getElementById('install').style.display='none';};
+if('serviceWorker' in navigator) addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+</script>
+</body>
+</html>
